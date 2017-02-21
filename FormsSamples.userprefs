@@ -1,9 +1,18 @@
-﻿<Properties StartupConfiguration="{9CCF26A3-EAFB-446B-8EB5-D777F5CB8C17}|Default">
+﻿<Properties StartupConfiguration="{947275E2-CB2E-41C8-97BB-C13BD42BE604}|Default" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.ItemProperties.FormsSamples.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C46FE99E-05CC-4FAB-A6E7-38F2F4D3A288" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FormsSamples Status">
+    <Files>
+      <File FileName="Droid/Localization.cs" Line="30" Column="6" />
+      <File FileName="FormsSamples/App.xaml.cs" Line="22" Column="1" />
+      <File FileName="FormsSamples Status" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.FormsSamples.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Dheeraj/FormsSamples/FormsSamples/App.xaml.cs" line="22" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
