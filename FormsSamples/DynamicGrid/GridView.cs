@@ -23,8 +23,25 @@ namespace FormsSamples
 				ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
 		}
 
-		public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create<GridView, object>(p => p.CommandParameter, null);
-		public static readonly BindableProperty CommandProperty = BindableProperty.Create<GridView, ICommand>(p => p.Command, null);
+		public static BindableProperty CommandParameterProperty = BindableProperty.Create(
+																	propertyName: "CommandParameter",
+																	returnType: typeof(object),
+																	declaringType: typeof(GridView),
+																	defaultValue: null,
+																	defaultBindingMode: BindingMode.TwoWay,
+																	propertyChanged: null);
+
+
+		public static BindableProperty CommandProperty = BindableProperty.Create(
+																	propertyName: "Command",
+																	returnType: typeof(ICommand),
+																	declaringType: typeof(GridView),
+																	defaultValue: null,
+																	defaultBindingMode: BindingMode.TwoWay,
+																	propertyChanged: null);
+
+
+
 		//     public static readonly BindableProperty ItemsSourceProperty = 
 		//BindableProperty.Create<GridView, IEnumerable<object>>(p => p.ItemsSource, null, BindingMode.OneWay, null, 
 		//	(bindable, oldValue, newValue) =>  { ((GridView)bindable).BuildTiles(newValue); });
@@ -96,6 +113,7 @@ namespace FormsSamples
 				var buildTile = (Layout)Activator.CreateInstance(ItemTemplate, item);
 				buildTile.InputTransparent = false;
 				buildTile.BindingContext = item;
+
 				var tapGestureRecognizer = new TapGestureRecognizer {
 					Command = Command,
 					CommandParameter = item

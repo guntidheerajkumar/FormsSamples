@@ -30,13 +30,14 @@ namespace FormsSamples
 
 			LstCustomData = new ObservableCollection<CustomData>();
 			CreateData();
-			ClickCommand = new Command(() => IncreaseExecuted());
+			MyDynamicGrid.Command = ClickCommand = new Command((obj) => {
+				if (obj != null) {
+					CustomData cdata = (CustomData)obj;
+					DisplayAlert(cdata.Title, cdata.ImageUrl, "Ok");
+				}
+			});
+			
 			await MyDynamicGrid.BuildTiles(LstCustomData);
-		}
-
-		private void IncreaseExecuted()
-		{
-
 		}
 
 		private void CreateData()

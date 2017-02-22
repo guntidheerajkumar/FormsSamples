@@ -44,7 +44,9 @@ namespace FormsSamples
 					Command = new Command(() => { }),
 				}
 			);
-			
+
+
+			layout.InputTransparent = true;
 			layout.Orientation = StackOrientation.Vertical;
 			layout.Children.Add(myImage);
 			layout.Children.Add(myLabel);

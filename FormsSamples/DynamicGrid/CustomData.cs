@@ -19,7 +19,7 @@ namespace FormsSamples
 			get { return _imageUrl; }
 			set {
 				_imageUrl = value;
-				//OnPropertyChanged();
+				OnPropertyChanged();
 			}
 		}
 
@@ -29,7 +29,7 @@ namespace FormsSamples
 			get { return _title; }
 			set {
 				_title = value;
-				//OnPropertyChanged();
+				OnPropertyChanged();
 			}
 		}
 
@@ -37,7 +37,7 @@ namespace FormsSamples
 
 		public void OnPropertyChanged([CallerMemberName] string propName = "")
 		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+			this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
 		}
 	}
 

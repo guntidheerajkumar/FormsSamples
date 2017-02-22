@@ -11,8 +11,6 @@
 					    ColumnSpacing="10" 
 						MaxColumns="2" 
 						Padding="20"
-						CommandParameter="{Binding}"
-						Command="{Binding ClickCommand}"
 						IsClippedToBounds="False">
 			<local:GridView.TileHeight>
 				<OnPlatform x:TypeArguments="x:Single" iOS="120" Android="120" WinPhone="120" />
