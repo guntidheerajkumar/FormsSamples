@@ -41,6 +41,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.es.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="DynamicGrid\DynamicGrid.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -65,6 +68,12 @@
     <Compile Include="Resources\Resources.es.Designer.cs">
       <DependentUpon>Resources.es.resx</DependentUpon>
     </Compile>
+    <Compile Include="DynamicGrid\DynamicGrid.xaml.cs">
+      <DependentUpon>DynamicGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicGrid\CustomData.cs" />
+    <Compile Include="DynamicGrid\GridView.cs" />
+    <Compile Include="DynamicGrid\TypeTemplate.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -86,6 +95,7 @@
   <ItemGroup>
     <Folder Include="FluentValidation\" />
     <Folder Include="Resources\" />
+    <Folder Include="DynamicGrid\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

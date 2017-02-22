@@ -19,10 +19,10 @@ namespace FormsSamples
 			//For Fluent Validation
 			//DependencyService.Register<IValidationService, ValidationService>();
 			//DependencyService.Register<IValidator<Employee>, EmployeeValidator>();
-			var ci = DependencyService.Get<ILocalization>().GetCurrentCultureInfo();
-			FormsSamples.Resources.Resources.Culture = ci;
-			DependencyService.Get<ILocalization>().SetLocale(ci);
-			MainPage = new NavigationPage(new MyPage());
+			//var ci = DependencyService.Get<ILocalization>().GetCurrentCultureInfo();
+			//FormsSamples.Resources.Resources.Culture = ci;
+			//DependencyService.Get<ILocalization>().SetLocale(ci);
+			MainPage = new NavigationPage(new DynamicGrid());
 		}
 
 		protected override void OnStart()
