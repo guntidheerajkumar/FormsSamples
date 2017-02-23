@@ -14,9 +14,7 @@ namespace FormsSamples
 {
 	public partial class DynamicGrid : ContentPage
 	{
-		public MainViewModel MainModel { get; set; }
-
-		//public Command ClickCommand { get; set; }
+		public MainViewModel MainModel { get; set; } 
 
 		public DynamicGrid()
 		{
@@ -27,12 +25,6 @@ namespace FormsSamples
 		{
 			base.OnAppearing();
 			BindingContext = MainModel = new MainViewModel();
-			//MyDynamicGrid.Command = ClickCommand = new Command((obj) => {
-			//	if (obj != null) {
-			//		CustomData cdata = (CustomData)obj;
-			//		DisplayAlert(cdata.Title, cdata.ImageUrl, "Ok");
-			//	}
-			//}); 
 		}
 	}
 }
