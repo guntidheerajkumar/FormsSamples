@@ -5,16 +5,13 @@
 //
 // Copyright (c) 2017 (c) Dheeraj Kumar Gunti
 //
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace FormsSamples
 {
 	public partial class DynamicGrid : ContentPage
 	{
-		public MainViewModel MainModel { get; set; } 
+		public MainViewModel MainModel { get; set; }
 
 		public DynamicGrid()
 		{
@@ -24,7 +21,7 @@ namespace FormsSamples
 		protected override void OnAppearing()
 		{
 			base.OnAppearing();
-			BindingContext = MainModel = new MainViewModel();
+			BindingContext = MainModel = new MainViewModel(this.Navigation);
 		}
 	}
 }

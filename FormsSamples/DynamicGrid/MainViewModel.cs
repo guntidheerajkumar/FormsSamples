@@ -14,12 +14,18 @@ namespace FormsSamples
 {
 	public class MainViewModel
 	{
+	
+		private INavigation navigation {
+			get;
+			set;
+		}
 		public ObservableCollection<CustomData> LstCustomData { get; set; }
 
 		public Command ClickCommand { get; set; }
 
-		public MainViewModel()
+		public MainViewModel(INavigation navigation)
 		{
+			this.navigation = navigation;
 			LstCustomData = new ObservableCollection<CustomData>();
 			CreateData();
 			ClickCommand = new Command(async (obj) => { await GetData(obj); });
@@ -27,13 +33,13 @@ namespace FormsSamples
 
 		private async Task GetData(object obj)
 		{
-			//var a = obj;
+			await navigation.PushAsync(new MyPage());
 		}
 
 		private void CreateData()
 		{
 
-			for (int i = 0; i < 1000; i++) {
+			for (int i = 0; i < 300; i++) {
 				LstCustomData.Add(new CustomData() { Title = $"Temporary Title {i.ToString()}" , ImageUrl = "http://farm8.staticflickr.com/7107/7441697680_3ef53f81e7_b.jpg" });
 			}
 
