@@ -1,23 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:FormsSamples;assembly=FormsSamples" x:Class="FormsSamples.DynamicGrid">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:FormsSamples;assembly=FormsSamples" x:Class="FormsSamples.DynamicGrid">
 	<ContentPage.Content>
-	  <ScrollView>
-		<local:GridView x:Name="MyDynamicGrid" 
-					    HorizontalOptions="FillAndExpand" 
-						Grid.Row="1" 
-						VerticalOptions="FillAndExpand"
-					    RowSpacing="10" 
-					    ColumnSpacing="10" 
-						MaxColumns="2" 
-						Padding="20"
-						ItemsSource="{Binding LstCustomData}"
-						Command="{Binding ClickCommand}"
-						IsClippedToBounds="False">
-			<local:GridView.TileHeight>
-				<OnPlatform x:TypeArguments="x:Single" iOS="120" Android="120" WinPhone="120" />
-			</local:GridView.TileHeight>
-		</local:GridView>
-	   </ScrollView>
+		<ScrollView>
+			<local:GridView x:Name="MyDynamicGrid" HorizontalOptions="FillAndExpand" Grid.Row="1" VerticalOptions="FillAndExpand" RowSpacing="10" ColumnSpacing="10" MaxColumns="2" Padding="20" ItemsSource="{Binding LstCustomData}" Command="{Binding ClickCommand}"
+				IsClippedToBounds="False">
+				<local:GridView.TileHeight>
+					<OnPlatform x:TypeArguments="x:Single" iOS="120" Android="120" WinPhone="120" />
+				</local:GridView.TileHeight>
+			</local:GridView>
+		</ScrollView>
 	</ContentPage.Content>
 </ContentPage>

@@ -107,6 +107,8 @@ namespace FormsSamples
 				}
 			} catch (Exception ex) {
 				throw ex;
+			} finally {
+				GC.Collect();
 			}
 		}
 
@@ -123,8 +125,7 @@ namespace FormsSamples
 				};
 
 				buildTile?.GestureRecognizers.Add(tapGestureRecognizer);
-
-
+				
 				return buildTile;
 			});
 		}

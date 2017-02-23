@@ -6,8 +6,10 @@
 // Copyright (c) 2017 (c) Dheeraj Kumar Gunti
 //
 using System;
-
+using FFImageLoading.Transformations;
+using FFImageLoading.Forms.Args;
 using Xamarin.Forms;
+using FFImageLoading.Forms;
 
 namespace FormsSamples
 {
@@ -33,18 +35,20 @@ namespace FormsSamples
 				VerticalOptions = LayoutOptions.Center
 			};
 
-			var myImage = new Image() {
+			var myImage = new CachedImage() {
+				HorizontalOptions = LayoutOptions.FillAndExpand,
+				HeightRequest = 80,
+				DownsampleToViewSize = true,
+				Aspect = Aspect.AspectFit,
 				Source = ImageSource.FromUri(new Uri(cdata.ImageUrl)),
-				MinimumHeightRequest = 90
+				TransformPlaceholders = false,
+				CacheType = FFImageLoading.Cache.CacheType.All,
+				LoadingPlaceholder = "loading.png",
+				ErrorPlaceholder = "error.png",
 			};
 
-			StackLayout layout = new StackLayout();
-			layout.GestureRecognizers.Add(
-				new TapGestureRecognizer {
-					Command = new Command(() => { }),
-				}
-			);
 
+			StackLayout layout = new StackLayout();
 
 			layout.InputTransparent = true;
 			layout.Orientation = StackOrientation.Vertical;
@@ -67,6 +71,7 @@ namespace FormsSamples
 			//	Constraint.RelativeToParent((parent) => { return parent.Height; }));
 
 			this.Children.Add(layout);
+
 		}
 	}
 }
