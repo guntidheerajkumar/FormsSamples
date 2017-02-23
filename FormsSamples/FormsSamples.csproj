@@ -74,6 +74,7 @@
     <Compile Include="DynamicGrid\CustomData.cs" />
     <Compile Include="DynamicGrid\GridView.cs" />
     <Compile Include="DynamicGrid\TypeTemplate.cs" />
+    <Compile Include="DynamicGrid\MainViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -88,6 +89,7 @@
     <Reference Include="FluentValidation">
       <HintPath>..\packages\FluentValidation.6.2.1.0\lib\portable-net45+wp80+win8+wpa81\FluentValidation.dll</HintPath>
     </Reference>
+   
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -40,11 +40,15 @@ namespace FormsSamples
 																	defaultBindingMode: BindingMode.TwoWay,
 																	propertyChanged: null);
 
-
-
-		//     public static readonly BindableProperty ItemsSourceProperty = 
-		//BindableProperty.Create<GridView, IEnumerable<object>>(p => p.ItemsSource, null, BindingMode.OneWay, null, 
-		//	(bindable, oldValue, newValue) =>  { ((GridView)bindable).BuildTiles(newValue); });
+		public static BindableProperty ItemsSourceProperty = BindableProperty.Create(
+																	propertyName: "ItemsSource",
+																	returnType: typeof(IEnumerable<object>),
+																	declaringType: typeof(GridView),
+																	defaultValue: null,
+																	defaultBindingMode: BindingMode.TwoWay,
+																	propertyChanged: async (bindable, oldValue, newValue) => {
+																		await ((GridView)bindable).BuildTiles((IEnumerable<object>)newValue);
+																	});																	
 
 		private int _maxColumns = 2;
 		private float _tileHeight = 0;
@@ -73,11 +77,10 @@ namespace FormsSamples
 			}
 		}
 
-		//     public IEnumerable<object> ItemsSource
-		//     {
-		//         get { return (IEnumerable<object>)GetValue(ItemsSourceProperty); }
-		//         set { SetValue(ItemsSourceProperty, value);  }
-		//     }
+		public IEnumerable<object> ItemsSource {
+			get { return (IEnumerable<object>)GetValue(ItemsSourceProperty); }
+			set { SetValue(ItemsSourceProperty, value); }
+		}
 
 		public async Task BuildTiles(IEnumerable<object> tiles)
 		{

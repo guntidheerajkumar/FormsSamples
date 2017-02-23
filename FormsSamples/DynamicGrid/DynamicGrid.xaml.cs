@@ -14,53 +14,25 @@ namespace FormsSamples
 {
 	public partial class DynamicGrid : ContentPage
 	{
-		public ObservableCollection<CustomData> LstCustomData { get; set; }
+		public MainViewModel MainModel { get; set; }
 
-		public Command ClickCommand { get; set; }
+		//public Command ClickCommand { get; set; }
 
 		public DynamicGrid()
 		{
 			InitializeComponent();
 		}
 
-		protected override async void OnAppearing()
+		protected override void OnAppearing()
 		{
 			base.OnAppearing();
-			BindingContext = LstCustomData;
-
-			LstCustomData = new ObservableCollection<CustomData>();
-			CreateData();
-			MyDynamicGrid.Command = ClickCommand = new Command((obj) => {
-				if (obj != null) {
-					CustomData cdata = (CustomData)obj;
-					DisplayAlert(cdata.Title, cdata.ImageUrl, "Ok");
-				}
-			});
-			
-			await MyDynamicGrid.BuildTiles(LstCustomData);
-		}
-
-		private void CreateData()
-		{
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "http://farm8.staticflickr.com/7107/7441697680_3ef53f81e7_b.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "https://s-media-cache-ak0.pinimg.com/736x/6d/8d/86/6d8d86223422fb7c584dd008bdb7cebb.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "https://www.oilpixel.com/upload_data/painting_image/image_after/oil-125-kid-digital-portrait-painting-12-12.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "http://farm3.static.flickr.com/2540/4099223815_516c8d7333_o.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "http://farm8.staticflickr.com/7107/7441697680_3ef53f81e7_b.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "https://s-media-cache-ak0.pinimg.com/736x/6d/8d/86/6d8d86223422fb7c584dd008bdb7cebb.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "https://www.oilpixel.com/upload_data/painting_image/image_after/oil-125-kid-digital-portrait-painting-12-12.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "http://farm3.static.flickr.com/2540/4099223815_516c8d7333_o.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "http://farm8.staticflickr.com/7107/7441697680_3ef53f81e7_b.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "https://s-media-cache-ak0.pinimg.com/736x/6d/8d/86/6d8d86223422fb7c584dd008bdb7cebb.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "https://www.oilpixel.com/upload_data/painting_image/image_after/oil-125-kid-digital-portrait-painting-12-12.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "http://farm3.static.flickr.com/2540/4099223815_516c8d7333_o.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "http://farm8.staticflickr.com/7107/7441697680_3ef53f81e7_b.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "https://s-media-cache-ak0.pinimg.com/736x/6d/8d/86/6d8d86223422fb7c584dd008bdb7cebb.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "https://www.oilpixel.com/upload_data/painting_image/image_after/oil-125-kid-digital-portrait-painting-12-12.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "http://farm3.static.flickr.com/2540/4099223815_516c8d7333_o.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "http://farm8.staticflickr.com/7107/7441697680_3ef53f81e7_b.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "https://s-media-cache-ak0.pinimg.com/736x/6d/8d/86/6d8d86223422fb7c584dd008bdb7cebb.jpg" });
-			LstCustomData.Add(new CustomData() { Title = "Temporary Title 1", ImageUrl = "https://www.oilpixel.com/upload_data/painting_image/image_after/oil-125-kid-digital-portrait-painting-12-12.jpg" });
+			BindingContext = MainModel = new MainViewModel();
+			//MyDynamicGrid.Command = ClickCommand = new Command((obj) => {
+			//	if (obj != null) {
+			//		CustomData cdata = (CustomData)obj;
+			//		DisplayAlert(cdata.Title, cdata.ImageUrl, "Ok");
+			//	}
+			//}); 
 		}
 	}
 }
