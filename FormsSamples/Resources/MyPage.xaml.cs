@@ -23,7 +23,7 @@ namespace FormsSamples
 		{
 			base.OnAppearing();
 
-			lblResourceLabel1.Text = FormsSamples.Resources.Resources.myText;
+			//lblResourceLabel1.Text = FormsSamples.Resources.Resources.myText;
 		}
 	}
 }

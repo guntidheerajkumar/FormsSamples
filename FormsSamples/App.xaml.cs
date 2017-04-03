@@ -22,7 +22,8 @@ namespace FormsSamples
 			//var ci = DependencyService.Get<ILocalization>().GetCurrentCultureInfo();
 			//FormsSamples.Resources.Resources.Culture = ci;
 			//DependencyService.Get<ILocalization>().SetLocale(ci);
-			MainPage = new NavigationPage(new DynamicGrid());
+		
+			MainPage = new NavigationPage(new MyPage());
 		}
 
 		protected override void OnStart()

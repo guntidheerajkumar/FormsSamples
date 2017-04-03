@@ -1,13 +1,7 @@
 ﻿<Properties StartupConfiguration="{9CCF26A3-EAFB-446B-8EB5-D777F5CB8C17}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.ItemProperties.FormsSamples.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C46FE99E-05CC-4FAB-A6E7-38F2F4D3A288" />
+  <MonoDevelop.Ide.ItemProperties.FormsSamples.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.ADCADF44-AD9E-45C2-9BEB-A1B086CC3B08" />
   <MonoDevelop.Ide.Workbench ActiveDocument="FormsSamples Status">
     <Files>
-      <File FileName="FormsSamples/DynamicGrid/MainViewModel.cs" Line="29" Column="4" />
-      <File FileName="FormsSamples/DynamicGrid/DynamicGrid.xaml" Line="13" Column="15" />
-      <File FileName="FormsSamples/DynamicGrid/GridView.cs" Line="112" Column="5" />
-      <File FileName="FormsSamples/DynamicGrid/TypeTemplate.cs" Line="46" Column="40" />
-      <File FileName="Droid/MainActivity.cs" Line="32" Column="33" />
-      <File FileName="iOS/AppDelegate.cs" Line="44" Column="29" />
       <File FileName="FormsSamples Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
@@ -15,9 +9,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Dheeraj/FormsSamples/FormsSamples/DynamicGrid/TypeTemplate.xaml.cs" line="23" column="1" />
-      <Breakpoint file="/Dheeraj/FormsSamples/FormsSamples/DynamicGrid/TypeTemplate.xaml.cs" line="17" column="1" />
+      <Breakpoint file="/Dheeraj/FormsSamples/FormsSamples/DynamicGrid/TypeTemplate.xaml.cs" relfile="FormsSamples/DynamicGrid/TypeTemplate.xaml.cs" line="23" column="1" />
+      <Breakpoint file="/Dheeraj/FormsSamples/FormsSamples/DynamicGrid/TypeTemplate.xaml.cs" relfile="FormsSamples/DynamicGrid/TypeTemplate.xaml.cs" line="17" column="1" />
+      <Breakpoint file="/Dheeraj/FormsSamples/FormsSamples/DynamicGrid/TypeTemplate.cs" relfile="FormsSamples/DynamicGrid/TypeTemplate.cs" line="29" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>
